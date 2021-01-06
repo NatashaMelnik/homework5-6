@@ -1,5 +1,5 @@
-function perform() {
-    //TODO implement
+function perform(val, callBack) {
+    return Promise.resolve(callBack(val));
 }
 
 perform(20, function (value) {
