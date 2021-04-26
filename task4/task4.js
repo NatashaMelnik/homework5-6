@@ -10,12 +10,12 @@ function isPrime(num) {
 
     let prime = true;
 
-    if (num == 0 || num == 1) {
+    if (num === 0 || num === 1) {
         prime = false;
     }
 
     for (let i = 2; i < num; i++) {
-        if (num % i == 0) {
+        if (num % i === 0) {
             prime = false;
             break;
         }
@@ -55,10 +55,10 @@ factorial(6);
 
 function fib(num) {
 
-    if (num == 0) {
+    if (num === 0) {
         return 0;
     }
-    if (num == 1) {
+    if (num === 1) {
         return 1;
     }
     else {
@@ -145,7 +145,7 @@ function indexOf(arr, num) {
     let ans = -1;
 
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == num) {
+        if (arr[i] === num) {
             ans = i;
         }
     }
@@ -164,20 +164,15 @@ indexOf([1, 2, 3], 4);
 
 function isPalindrome(str) {
     let ans = true;
-    let str2 = reverse(str);
-
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] != str2[i]) {
+    str = str.split(" ").join("").toUpperCase();
+    for (let i = 0, j = str.length-1; i < Math.sqrt(str.length); i++, j--) {
+        if (str[i] !== str[j]) {
             ans = false;
             break;
         }
     }
 
     return ans;
-}
-
-function reverse(s) {
-    return s.split("").reverse().join("");
 }
 
 isPalindrome('');
