@@ -189,12 +189,7 @@ isPalindrome('A man a plan a canal Panama');
 
 function missing(arr) {
 
-    if (isSorted(arr)) {
-
-        return undefined;
-
-    }
-    else {
+    if (!(isSorted(arr) && arr[0] === 1)) {
 
         let total = 1;
 
@@ -204,6 +199,7 @@ function missing(arr) {
         }
 
         return total;
+
     }
 }
 
