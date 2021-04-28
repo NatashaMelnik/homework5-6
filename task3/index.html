@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
     <meta charset="UTF-8" />
     <title>Homework 5</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+    <style type="text/css">
+        .dragElement {
+            display: inline-block;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $('.dragElement').draggable({
+                containment: "parent"
+            });
+        });
+    </script>
+</head>
 
-  <body>
-
+<body>
     <div id="container">
 
-      <div class="first_element">
-        <span id="first_element_text">   Lorem ipsum dolor...</span>
-        <button id="first_element_button">X</button>
-      </div>
+        <div class="dragElement ui-widget ui-corner-all ui-state-error">
+            <span id="first_element_text"> Lorem ipsum dolor...</span>
+            <button id="first_element_button">X</button>
+        </div>
 
-      <div class="second_element">
-        <span id="second_element_text">   Lorem Ipsum</span>
-        <button id="second_element_button">X</button>
-      </div>
+        <div class="dragElement ui-widget ui-corner-all ui-state-error">
+            <span id="second_element_text"> Lorem Ipsum</span>
+            <button id="second_element_button">X</button>
+        </div>
 
-      <div class="third_element">
-        <span id="third_element_text">   Lorem</span>
-        <button id="third_element_button">X</button>
-      </div>
+        <div class="dragElement ui-widget ui-corner-all ui-state-error">
+            <span id="third_element_text"> Lorem</span>
+            <button id="third_element_button">X</button>
+        </div>
     </div>
-
+    </div>
     <script src="task3.js"></script>
-  </body>
+</body>
+
 </html>

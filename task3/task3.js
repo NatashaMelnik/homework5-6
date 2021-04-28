@@ -17,123 +17,132 @@ first_element_button.style.visibility = 'hidden';
 second_element_button.style.visibility = 'hidden';
 third_element_button.style.visibility = 'hidden';
 
-first_element_text.onmousedown = function (event) {
+
+first_element_text.onmousedown = function(event) {
 
     first_element_button.style.visibility = 'visible';
     second_element_button.style.visibility = 'hidden';
     third_element_button.style.visibility = 'hidden';
 
-    let shiftX = event.clientX - first_element_text.getBoundingClientRect().left;
-    let shiftY = event.clientY - first_element_text.getBoundingClientRect().top;
+    // let shiftX = event.clientX - first_element_text.getBoundingClientRect().left;
+    // let shiftY = event.clientY - first_element_text.getBoundingClientRect().top;
 
-    first_element_text.style.position = 'absolute';
-    first_element_text.style.zIndex = 1000;
-    document.body.append(first_element_text);
-    first_element_button.style.position = 'absolute';
-    first_element_button.style.zIndex = 1000;
-    document.body.append(first_element_button);
+    // first_element_text.style.position = 'absolute';
+    // first_element_text.style.zIndex = 1000;
+    // document.body.append(first_element_text);
+    // first_element_button.style.position = 'absolute';
+    // first_element_button.style.zIndex = 1000;
+    // document.body.append(first_element_button);
 
-    moveAt(event.pageX, event.pageY);
+    // moveAt(event.pageX, event.pageY);
 
-    function moveAt(pageX, pageY) {
-        pageX = coordinatX(pageX);
-        pageY = coordinatY(pageY);
-        first_element_text.style.left = pageX - shiftX + 'px';
-        first_element_text.style.top = pageY - shiftY + 'px';
-        first_element_button.style.left = pageX - shiftX + 156 + 'px';
-        first_element_button.style.top = pageY - shiftY + 'px';
-    }
+    // document.addEventListener('mouseup', onMouseUp);
 
-    function onMouseMove(event) {
-        moveAt(event.pageX, event.pageY);
-    }
+    // function moveAt(pageX, pageY) {
 
-    document.addEventListener('mousemove', onMouseMove);
+    //     pageX = coordinatX(pageX);
+    //     pageY = coordinatY(pageY);
 
-    first_element_text.onmouseup = function () {
-        document.removeEventListener('mousemove', onMouseMove);
-        first_element_text.onmouseup = null;
-    };
+    //     first_element_text.style.left = pageX - shiftX + 'px';
+    //     first_element_text.style.top = pageY - shiftY + 'px';
+    //     first_element_button.style.left = pageX - shiftX + 156 + 'px';
+    //     first_element_button.style.top = pageY - shiftY + 'px';
+    // }
+
+    // function onMouseMove(event) {
+    //     moveAt(event.pageX, event.pageY);
+    // }
+
+    // document.addEventListener('mousemove', onMouseMove);
+
+    // function onMouseUp() {
+    //     document.removeEventListener('mouseup', onMouseUp);
+    //     document.removeEventListener('mousemove', onMouseMove);
+    // }
 
 };
 
-second_element_text.onmousedown = function (event) {
+second_element_text.onmousedown = function(event) {
 
     first_element_button.style.visibility = 'hidden';
     second_element_button.style.visibility = 'visible';
     third_element_button.style.visibility = 'hidden';
 
-    let shiftX = event.clientX - second_element_text.getBoundingClientRect().left;
-    let shiftY = event.clientY - second_element_text.getBoundingClientRect().top;
+    // let shiftX = event.clientX - second_element_text.getBoundingClientRect().left;
+    // let shiftY = event.clientY - second_element_text.getBoundingClientRect().top;
 
-    second_element_text.style.position = 'absolute';
-    second_element_text.style.zIndex = 1000;
-    document.body.append(second_element_text);
-    second_element_button.style.position = 'absolute';
-    second_element_button.style.zIndex = 1000;
-    document.body.append(second_element_button);
+    // second_element_text.style.position = 'absolute';
+    // second_element_text.style.zIndex = 1000;
+    // document.body.append(second_element_text);
+    // second_element_button.style.position = 'absolute';
+    // second_element_button.style.zIndex = 1000;
+    // document.body.append(second_element_button);
 
-    moveAt(event.pageX, event.pageY);
+    // moveAt(event.pageX, event.pageY);
 
-    function moveAt(pageX, pageY) {
-        pageX = coordinatX(pageX);
-        pageY = coordinatY(pageY);
-        second_element_text.style.left = pageX - shiftX + 'px';
-        second_element_text.style.top = pageY - shiftY + 'px';
-        second_element_button.style.left = pageX - shiftX + 108 + 'px';
-        second_element_button.style.top = pageY - shiftY + 'px';
-    }
+    // document.addEventListener('mouseup', onMouseUp);
 
-    function onMouseMove(event) {
-        moveAt(event.pageX, event.pageY);
-    }
+    // function moveAt(pageX, pageY) {
+    //     pageX = coordinatX(pageX);
+    //     pageY = coordinatY(pageY);
+    //     second_element_text.style.left = pageX - shiftX + 'px';
+    //     second_element_text.style.top = pageY - shiftY + 'px';
+    //     second_element_button.style.left = pageX - shiftX + 108 + 'px';
+    //     second_element_button.style.top = pageY - shiftY + 'px';
+    // }
 
-    document.addEventListener('mousemove', onMouseMove);
+    // function onMouseMove(event) {
+    //     moveAt(event.pageX, event.pageY);
+    // }
 
-    second_element_text.onmouseup = function () {
-        document.removeEventListener('mousemove', onMouseMove);
-        second_element_text.onmouseup = null;
-    };
+    // document.addEventListener('mousemove', onMouseMove);
+
+    // function onMouseUp() {
+    //     document.removeEventListener('mouseup', onMouseUp);
+    //     document.removeEventListener('mousemove', onMouseMove);
+    // }
 
 };
 
-third_element_text.onmousedown = function (event) {
+third_element_text.onmousedown = function(event) {
 
     first_element_button.style.visibility = 'hidden';
     second_element_button.style.visibility = 'hidden';
     third_element_button.style.visibility = 'visible';
 
-    let shiftX = event.clientX - third_element_text.getBoundingClientRect().left;
-    let shiftY = event.clientY - third_element_text.getBoundingClientRect().top;
+    // let shiftX = event.clientX - third_element_text.getBoundingClientRect().left;
+    // let shiftY = event.clientY - third_element_text.getBoundingClientRect().top;
 
-    third_element_text.style.position = 'absolute';
-    third_element_text.style.zIndex = 1000;
-    document.body.append(third_element_text);
-    third_element_button.style.position = 'absolute';
-    third_element_button.style.zIndex = 1000;
-    document.body.append(third_element_button);
+    // third_element_text.style.position = 'absolute';
+    // third_element_text.style.zIndex = 1000;
+    // document.body.append(third_element_text);
+    // third_element_button.style.position = 'absolute';
+    // third_element_button.style.zIndex = 1000;
+    // document.body.append(third_element_button);
 
-    moveAt(event.pageX, event.pageY);
+    // moveAt(event.pageX, event.pageY);
 
-    function moveAt(pageX, pageY) {
-        pageX = coordinatX(pageX);
-        pageY = coordinatY(pageY);
-        third_element_text.style.left = pageX - shiftX + 'px';
-        third_element_text.style.top = pageY - shiftY + 'px';
-        third_element_button.style.left = pageX - shiftX + 65 + 'px';
-        third_element_button.style.top = pageY - shiftY + 'px';
-    }
+    // document.addEventListener('mouseup', onMouseUp);
 
-    function onMouseMove(event) {
-        moveAt(event.pageX, event.pageY);
-    }
+    // function moveAt(pageX, pageY) {
+    //     pageX = coordinatX(pageX);
+    //     pageY = coordinatY(pageY);
+    //     third_element_text.style.left = pageX - shiftX + 'px';
+    //     third_element_text.style.top = pageY - shiftY + 'px';
+    //     third_element_button.style.left = pageX - shiftX + 65 + 'px';
+    //     third_element_button.style.top = pageY - shiftY + 'px';
+    // }
 
-    document.addEventListener('mousemove', onMouseMove);
+    // function onMouseMove(event) {
+    //     moveAt(event.pageX, event.pageY);
+    // }
 
-    third_element_text.onmouseup = function () {
-        document.removeEventListener('mousemove', onMouseMove);
-        third_element_text.onmouseup = null;
-    };
+    // document.addEventListener('mousemove', onMouseMove);
+
+    // function onMouseUp() {
+    //     document.removeEventListener('mouseup', onMouseUp);
+    //     document.removeEventListener('mousemove', onMouseMove);
+    // }
 
 };
 
@@ -157,32 +166,17 @@ function coordinatY(pageY) {
     return pageY;
 }
 
-first_element_button.onclick = function () {
+first_element_button.onclick = function() {
     first_element_text.remove();
     first_element_button.remove();
 };
 
-second_element_button.onclick = function () {
+second_element_button.onclick = function() {
     second_element_text.remove();
     second_element_button.remove();
 };
 
-third_element_button.onclick = function () {
+third_element_button.onclick = function() {
     third_element_text.remove();
     third_element_button.remove();
 };
-
-first_element_text.ondragstart = function () {
-    return false;
-};
-
-second_element_text.ondragstart = function () {
-    return false;
-};
-
-third_element_text.ondragstart = function () {
-    return false;
-};
-
-
-
